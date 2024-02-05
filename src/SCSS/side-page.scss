@@ -1,0 +1,16 @@
+@media (min-width: 1024px) {
+  .side-page {
+    .anime-list-main {
+      grid-template-columns: repeat(2, auto);
+      max-width: 400px;
+    }
+  }
+}
+@media (min-width: 1280px) {
+  .side-page {
+    .anime-list-main {
+      grid-template-columns: repeat(3, auto);
+      max-width: 700px;
+    }
+  }
+}

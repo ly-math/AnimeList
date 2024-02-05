@@ -1,0 +1,20 @@
+$blue: blueviolet;
+
+.header {
+  position: fixed;
+  background-color: $blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+  }
+}
