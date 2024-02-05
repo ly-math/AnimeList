@@ -33,6 +33,25 @@ input {
   height: 100vh;
 }
 
+.anime-list-wrap {
+  position: relative;
+
+  .view-more-btn {
+    background-color: blueviolet;
+    color: white;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+
+    cursor: pointer;
+  }
+}
+
 @media (min-width: 1024px) {
   main {
     padding-top: 0;

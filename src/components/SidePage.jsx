@@ -4,9 +4,9 @@ import "../SCSS/side-page.scss";
 
 function SidePage() {
   const [upComingAnime, setUpComingAnime] = useState([]);
-
   const [isClicked, setIsClicked] = useState(false);
   const [clickData, setClickData] = useState();
+  const [viewMoreBtn, setViewMoreBtn] = useState(false);
 
   useEffect(() => {
     fetchUpComing();
@@ -22,10 +22,18 @@ function SidePage() {
     }, 2000);
   }
 
+  function handleViewMoreBtn() {
+    setViewMoreBtn(!viewMoreBtn);
+  }
+
   return (
-    <div className="side-page">
+    <div className="side-page anime-list-wrap">
       <h2 className="h2">Upcoming Anime</h2>
-      <div className="anime-list-main">
+      <div
+        className={
+          viewMoreBtn ? "full-width anime-list-main" : "anime-list-main"
+        }
+      >
         {upComingAnime
           ? upComingAnime.map((item, i) => {
               return (
@@ -62,6 +70,9 @@ function SidePage() {
           ""
         )}
       </div>
+      <button className="view-more-btn" onClick={handleViewMoreBtn}>
+        {viewMoreBtn ? "Show less 🠩" : "Show more ⬇"}
+      </button>
     </div>
   );
 }

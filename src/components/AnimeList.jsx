@@ -5,11 +5,20 @@ import AnimeInfo from "./AnimeInfo";
 function AnimeList({ animeData, h2Search }) {
   const [isClicked, setIsClicked] = useState(false);
   const [clickData, setClickData] = useState();
+  const [viewMoreBtn, setViewMoreBtn] = useState(false);
+
+  function handleViewMoreBtn() {
+    setViewMoreBtn(!viewMoreBtn);
+  }
 
   return (
     <>
       <h2 className="h2 most-popular">{h2Search}</h2>
-      <div className="anime-list-main ">
+      <div
+        className={
+          viewMoreBtn ? "full-width anime-list-main" : "anime-list-main"
+        }
+      >
         {animeData
           ? animeData.map((item, i) => {
               return (
@@ -44,6 +53,10 @@ function AnimeList({ animeData, h2Search }) {
           ""
         )}
       </div>
+
+      <button className="view-more-btn" onClick={handleViewMoreBtn}>
+        {viewMoreBtn ? "Show less 🠩" : "Show more ⬇"}
+      </button>
     </>
   );
 }

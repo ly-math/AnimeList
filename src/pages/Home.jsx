@@ -38,7 +38,9 @@ const Home = () => {
       />
       <div className="homepage-container">
         <main>
-          <AnimeList animeData={animeData} h2Search={h2Search} />
+          <div className="anime-list-wrap">
+            <AnimeList animeData={animeData} h2Search={h2Search} />
+          </div>
         </main>
         <SidePage />
       </div>

@@ -9,8 +9,10 @@ function App() {
 
   useEffect(() => {
     setLoadingPage(true);
+    document.body.style.overflow = "hidden";
     setTimeout(() => {
       setLoadingPage(false);
+      document.body.style.overflow = "visible";
     }, 2500);
   }, []);
 

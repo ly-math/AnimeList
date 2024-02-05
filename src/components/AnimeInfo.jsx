@@ -2,7 +2,6 @@ import React from "react";
 import "../SCSS/anime-info.scss";
 
 function AnimeInfo({ clickData, setIsClicked }) {
-  console.log(clickData);
   return (
     <div className="anime-info">
       <div className="container">
@@ -21,7 +20,7 @@ function AnimeInfo({ clickData, setIsClicked }) {
             <h4>Season: {clickData.season}</h4>
             <h4>Rank: #{clickData.rank}</h4>
             <h4>
-              Studios:{" "}
+              Studios:
               {clickData.studios[0].name ? clickData.studios[0].name : ""}, ...
             </h4>
           </div>
