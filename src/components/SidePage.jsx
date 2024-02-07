@@ -28,7 +28,7 @@ function SidePage() {
 
   return (
     <div className={viewMoreBtn ? "side-page full-width" : "side-page"}>
-      <h2 className="h2">Upcoming Anime</h2>
+      <h2 className="h2">Top Upcoming</h2>
       <div className="anime-list-main-2">
         {upComingAnime
           ? upComingAnime.map((item, i) => {

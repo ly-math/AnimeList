@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import LoadingLayout from "./components/loadingLayout";
 import Home from "./pages/Home";
 import Header from "./components/Header";
-import NavBar from "./components/NavBar";
 
 function App() {
   const [loadingPage, setLoadingPage] = useState(false);
@@ -23,7 +22,6 @@ function App() {
       </div>
       <Header />
       <Home />
-      <NavBar />
     </>
   );
 }

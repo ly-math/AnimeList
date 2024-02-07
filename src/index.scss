@@ -17,6 +17,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 button,
@@ -79,6 +83,12 @@ input {
     color: white;
     text-decoration: none;
   }
+}
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: 600px) {

@@ -1,0 +1,40 @@
+.current-season-wrap {
+  position: relative;
+
+  .current-season {
+    margin-left: 2rem;
+    width: 100vw;
+    height: 15rem;
+    background-color: black;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    // border: 1px solid red;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      cursor: pointer;
+      position: relative;
+      .img {
+        img {
+          border-radius: 0.5rem;
+          width: 10rem;
+        }
+        strong {
+          position: absolute;
+          color: white;
+          background-color: blueviolet;
+          font-size: 1rem;
+          width: 100%;
+          bottom: 0;
+          left: 0;
+          border-radius: 0 0 0.5rem 0.5rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
