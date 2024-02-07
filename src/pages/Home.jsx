@@ -38,11 +38,13 @@ const Home = () => {
       />
       <div className="homepage-container">
         <main>
-          <div className="anime-list-wrap">
+          <div className="anime-list-wrap" id="to-top">
             <AnimeList animeData={animeData} h2Search={h2Search} />
           </div>
         </main>
-        <SidePage />
+        <div className="side-page-wrap" id="to-top-2">
+          <SidePage />
+        </div>
       </div>
     </>
   );

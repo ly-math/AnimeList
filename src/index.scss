@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 3rem;
+}
+
 body {
   font-family: sans-serif;
   background-color: black;
@@ -38,17 +43,86 @@ input {
 
   .view-more-btn {
     background-color: blueviolet;
-    color: white;
-    font-weight: 600;
     position: absolute;
     bottom: 0;
-    left: 45%;
+    left: 30%;
     width: 8rem;
     height: 2rem;
     border-radius: 0.5rem;
     font-size: 1rem;
 
     cursor: pointer;
+    a {
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+    }
+  }
+}
+
+.side-page {
+  position: relative;
+  .view-more-btn {
+    background-color: blueviolet;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+
+    cursor: pointer;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .anime-list-wrap {
+    position: relative;
+
+    .view-more-btn {
+      background-color: blueviolet;
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+      width: 8rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+
+      cursor: pointer;
+      a {
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .side-page {
+    position: relative;
+    .view-more-btn {
+      background-color: blueviolet;
+      font-weight: 600;
+      position: absolute;
+      bottom: 0;
+      left: 40%;
+      width: 8rem;
+      height: 2rem;
+      border-radius: 0.5rem;
+      font-size: 1rem;
+
+      cursor: pointer;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
   }
 }
 

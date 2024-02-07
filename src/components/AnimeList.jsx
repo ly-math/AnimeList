@@ -55,7 +55,7 @@ function AnimeList({ animeData, h2Search }) {
       </div>
 
       <button className="view-more-btn" onClick={handleViewMoreBtn}>
-        {viewMoreBtn ? "Show less 🠩" : "Show more ⬇"}
+        <a href="#to-top">{viewMoreBtn ? "Show less 🠩" : "Show more ⬇"}</a>
       </button>
     </>
   );

@@ -19,10 +19,7 @@ function AnimeInfo({ clickData, setIsClicked }) {
             </h4>
             <h4>Season: {clickData.season}</h4>
             <h4>Rank: #{clickData.rank}</h4>
-            <h4>
-              Studios:
-              {clickData.studios[0].name ? clickData.studios[0].name : ""}, ...
-            </h4>
+            <h4>Studios:</h4>
           </div>
           <iframe
             src={`https://www.youtube.com/embed/${clickData.trailer.youtube_id}`}

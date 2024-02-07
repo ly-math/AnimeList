@@ -1,10 +1,96 @@
 .side-page {
   position: relative;
+  height: 51rem;
+  overflow: hidden;
+
+  .anime-list-main-2 {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 10rem;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      // background-color: red;
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.1)
+      );
+    }
+
+    .card {
+      transition: scale 0.2s ease-in-out;
+
+      .image {
+        position: relative;
+        img {
+          width: 10rem;
+          border-radius: 0.5rem;
+        }
+        span {
+          color: white;
+          background-color: blue;
+          font-weight: bold;
+          position: absolute;
+          bottom: 0.5rem;
+          left: 0.5rem;
+          padding: 0.2rem;
+          border-radius: 0.5rem;
+        }
+      }
+
+      .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+          color: white;
+          width: 10rem;
+          text-align: center;
+        }
+      }
+
+      &:hover {
+        scale: 1.05;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
+.side-page.full-width {
+  height: 100%;
+}
+
+@media (min-width: 600px) {
+  .side-page {
+    .anime-list-main-2 {
+      grid-template-columns: repeat(3, auto);
+      max-width: 600px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .side-page {
+    .anime-list-main-2 {
+      grid-template-columns: repeat(4, auto);
+      max-width: 768px;
+    }
+  }
+}
 @media (min-width: 1024px) {
   .side-page {
-    .anime-list-main {
+    .anime-list-main-2 {
       grid-template-columns: repeat(2, auto);
       max-width: 400px;
     }
@@ -12,9 +98,9 @@
 }
 @media (min-width: 1280px) {
   .side-page {
-    .anime-list-main {
+    .anime-list-main-2 {
       grid-template-columns: repeat(3, auto);
-      max-width: 700px;
+      max-width: 1280px;
     }
   }
 }
