@@ -11,7 +11,7 @@ function CurrentSeason() {
   useEffect(() => {
     setTimeout(() => {
       fetchAnimeSeason();
-    }, 4000);
+    }, 2000);
   }, []);
 
   function getCurrentSeason() {
@@ -46,20 +46,6 @@ function CurrentSeason() {
     }
   }
 
-  useEffect(() => {
-    fecthTest();
-  }, []);
-
-  async function fecthTest() {
-    const response = await fetch(
-      `https://api.jikan.moe/v4/recommendations/anime`
-    );
-    const dataJson = await response.json();
-    // dataJson.data.map((entry) => {
-    //   entry.map((anime) => console.log(anime));
-    // });
-  }
-
   return (
     <>
       <h2 className="h2">{`Top ${upperCaseSeasonNow} ${yearNow}`}</h2>
@@ -80,6 +66,7 @@ function CurrentSeason() {
           </div>
         ))}
       </div>
+
       {isClicked ? (
         <div>
           <AnimeInfo clickData={clickData} setIsClicked={setIsClicked} />

@@ -5,6 +5,7 @@ import SearchBar from "../components/SearchBar";
 import AnimeList from "../components/AnimeList";
 import SidePage from "../components/SidePage";
 import CurrentSeason from "../components/CurrentSeason";
+import Recommendation from "../components/Recommendation";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -50,6 +51,9 @@ const Home = () => {
         <div className="side-page-wrap" id="to-top-2">
           <SidePage />
         </div>
+      </div>
+      <div className="recommendation-wrap">
+        <Recommendation />
       </div>
     </>
   );

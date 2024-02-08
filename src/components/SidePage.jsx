@@ -19,7 +19,7 @@ function SidePage() {
       );
       const result = await res.json();
       setUpComingAnime(result.data);
-    }, 2000);
+    }, 4000);
   }
 
   function handleViewMoreBtn() {
