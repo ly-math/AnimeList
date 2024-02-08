@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import LoadingLayout from "./components/loadingLayout";
+import LoadingLayout from "./components/LoadingLayout";
 import Home from "./pages/Home";
 import Header from "./components/Header";
 
