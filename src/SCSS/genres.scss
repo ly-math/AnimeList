@@ -1,60 +1,80 @@
-.genres {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  width: 80vw;
-  max-height: 15rem;
-  overflow: hidden;
-  position: relative;
-  margin-bottom: 20rem;
+.genres-wrap {
+  display: grid;
+  place-content: center;
+  .genres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 80vw;
+    max-height: 10rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20rem;
 
-  &::after {
-    content: "";
-    position: absolute;
-    height: 4rem;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    // background-color: red;
-    background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0.1)
-    );
-  }
+    .Link {
+      text-decoration: none;
+    }
 
-  button {
-    color: white;
-    position: absolute;
-    background-color: blueviolet;
-    width: 7rem;
-    height: 2rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    bottom: 1rem;
-    box-shadow: 0 0 10px blueviolet;
-    cursor: pointer;
-    z-index: 10;
-  }
-  .genre-list {
-    width: fit-content;
-    // border: 1px solid red;
-    background-color: rgb(53, 53, 53);
-    padding: 0.2rem;
-    border-radius: 0.2rem;
-    cursor: pointer;
-    p {
-      color: rgba(0, 255, 255, 0.4);
+    &::after {
+      content: "";
+      position: absolute;
+      height: 4rem;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      // background-color: red;
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.1)
+      );
+    }
+
+    button {
+      color: white;
+      position: absolute;
+      background-color: blueviolet;
+      width: 7rem;
+      height: 2rem;
       font-size: 1rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      bottom: 1rem;
+      box-shadow: 0 0 10px blueviolet;
+      z-index: 10;
+      cursor: pointer;
+    }
+    .genre-list {
+      width: fit-content;
+      // border: 1px solid red;
+      background-color: rgb(53, 53, 53);
+      border: 1px solid blueviolet;
+      padding: 0.2rem;
+      border-radius: 0.2rem;
+      cursor: pointer;
+      p {
+        color: rgba(0, 255, 255, 0.4);
+        font-size: 1rem;
+      }
     }
   }
 }
 
 .genres.expand {
   max-height: fit-content;
+  overflow: visible;
+
+  button {
+    bottom: -10%;
+  }
   &::after {
     display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .genres {
+    max-width: 50rem;
   }
 }

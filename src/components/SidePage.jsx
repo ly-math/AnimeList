@@ -4,22 +4,23 @@ import "../SCSS/side-page.scss";
 
 function SidePage() {
   const [upComingAnime, setUpComingAnime] = useState([]);
+
   const [isClicked, setIsClicked] = useState(false);
   const [clickData, setClickData] = useState();
   const [viewMoreBtn, setViewMoreBtn] = useState(false);
 
   useEffect(() => {
-    fetchUpComing();
+    setTimeout(() => {
+      fetchUpComing();
+    }, 4000);
   }, []);
 
   async function fetchUpComing() {
-    setTimeout(async () => {
-      const res = await fetch(
-        `https://api.jikan.moe/v4/seasons/upcoming?q=&limit=21`
-      );
-      const result = await res.json();
-      setUpComingAnime(result.data);
-    }, 4000);
+    const res = await fetch(
+      `https://api.jikan.moe/v4/seasons/upcoming?q=&limit=25`
+    );
+    const result = await res.json();
+    setUpComingAnime(result.data);
   }
 
   function handleViewMoreBtn() {

@@ -48,12 +48,13 @@ input {
   .view-more-btn {
     background-color: blueviolet;
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     left: 30%;
-    width: 8rem;
+    width: 7rem;
     height: 2rem;
     border-radius: 0.5rem;
     font-size: 1rem;
+    box-shadow: 0 0 10px blueviolet;
 
     cursor: pointer;
     a {
@@ -70,12 +71,13 @@ input {
     background-color: blueviolet;
     font-weight: 600;
     position: absolute;
-    bottom: 0;
+    bottom: 2rem;
     left: 30%;
-    width: 8rem;
+    width: 7rem;
     height: 2rem;
     border-radius: 0.5rem;
     font-size: 1rem;
+    box-shadow: 0 0 10px blueviolet;
 
     cursor: pointer;
   }

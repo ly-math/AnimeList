@@ -50,21 +50,26 @@ function CurrentSeason() {
     <>
       <h2 className="h2">{`Top ${upperCaseSeasonNow} ${yearNow}`}</h2>
       <div className="current-season">
-        {seasonNowData.map((item, i) => (
-          <div
-            className="card"
-            key={i}
-            onClick={() => {
-              setClickData(item);
-              setIsClicked(true);
-            }}
-          >
-            <div className="img">
-              <img src={item.images.jpg.large_image_url} alt="anime-image" />
-              <strong># {i + 1}</strong>
-            </div>
-          </div>
-        ))}
+        {seasonNowData
+          ? seasonNowData.map((item, i) => (
+              <div
+                className="card"
+                key={i}
+                onClick={() => {
+                  setClickData(item);
+                  setIsClicked(true);
+                }}
+              >
+                <div className="img">
+                  <img
+                    src={item.images.jpg.large_image_url}
+                    alt="anime-image"
+                  />
+                  <strong># {i + 1}</strong>
+                </div>
+              </div>
+            ))
+          : ""}
       </div>
 
       {isClicked ? (

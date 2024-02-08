@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import LoadingLayout from "./components/loadingLayout";
 import Home from "./pages/Home";
-import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import GenrePage from "./pages/GenrePage";
 
 function App() {
   const [loadingPage, setLoadingPage] = useState(false);
@@ -20,8 +21,13 @@ function App() {
       <div className="loading-screen">
         {loadingPage ? <LoadingLayout loadingPage={loadingPage} /> : ""}
       </div>
-      <Header />
-      <Home />
+
+      <Router>
+        <Routes>
+          <Route path="/AnimeList/" element={<Home />} />
+          <Route path="/genre/:genre" element={<GenrePage />} />
+        </Routes>
+      </Router>
     </>
   );
 }

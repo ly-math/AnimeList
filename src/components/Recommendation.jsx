@@ -6,7 +6,9 @@ function Recommendation() {
   const [sliceRecommData, setSliceRecommData] = useState([]);
 
   useEffect(() => {
-    fetchRecommData();
+    setTimeout(() => {
+      fetchRecommData();
+    }, 6000);
   }, []);
 
   async function fetchRecommData() {

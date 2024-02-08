@@ -22,8 +22,8 @@ const Home = () => {
   async function fetchData() {
     const response = await fetch(
       search
-        ? `https://api.jikan.moe/v4/anime?q=${search}&limit=21`
-        : "https://api.jikan.moe/v4/top/anime?q=&limit=21"
+        ? `https://api.jikan.moe/v4/anime?q=${search}&limit=25`
+        : "https://api.jikan.moe/v4/top/anime?q=&limit=25"
     );
     const data = await response.json();
     setAnmieData(data.data);

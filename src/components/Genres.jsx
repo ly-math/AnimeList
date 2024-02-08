@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "../SCSS/genres.scss";
+import { Link } from "react-router-dom";
 
 function Genres() {
   const [genresData, SetGenresData] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-    fetchGenresData();
+    setTimeout(() => {
+      fetchGenresData();
+    }, 7000);
   }, []);
 
   async function fetchGenresData() {
@@ -22,12 +25,16 @@ function Genres() {
       <div className={isClicked ? "genres expand" : "genres"}>
         {genresData
           ? genresData.map((item, i) => (
-              <div className="genre-list" key={i}>
-                <p>{item.name}</p>
-              </div>
+              <Link key={i} to={`/genre/${item.name}`} className="Link">
+                <div className="genre-list">
+                  <p>{item.name}</p>
+                </div>
+              </Link>
             ))
           : ""}
-        <button onClick={() => setIsClicked(!isClicked)}>Show More?</button>
+        <button onClick={() => setIsClicked(!isClicked)}>
+          {isClicked ? "Show less?" : "Show More?"}
+        </button>
       </div>
     </>
   );
