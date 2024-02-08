@@ -43,7 +43,7 @@ function SidePage() {
                 >
                   <div className="image">
                     <img src={item.images.jpg.large_image_url} alt="image" />
-                    <span>Ep : {item.episodes}</span>
+                    <span>Ep : {item.episodes || "?"}</span>
                   </div>
 
                   <div className="title">

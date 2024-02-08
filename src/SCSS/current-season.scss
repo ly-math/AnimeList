@@ -38,3 +38,27 @@
     }
   }
 }
+
+@media (min-width: 600px) {
+  .current-season-wrap {
+    .current-season {
+      margin-left: 0;
+      width: 85vw;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .current-season-wrap {
+    .current-season {
+      width: 65vw;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .current-season-wrap {
+    .current-season {
+      width: 60rem;
+    }
+  }
+}

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../SCSS/current-season.scss";
+import AnimeInfo from "./AnimeInfo";
 
 function CurrentSeason() {
   const [isClicked, setIsClicked] = useState(false);
+  const [clickData, setClickData] = useState();
 
   const [seasonNowData, setSeasonNowData] = useState([]);
 
@@ -42,6 +44,20 @@ function CurrentSeason() {
     } catch (error) {
       console.error(error);
     }
+  }
+
+  useEffect(() => {
+    fecthTest();
+  }, []);
+
+  async function fecthTest() {
+    const response = await fetch(
+      `https://api.jikan.moe/v4/recommendations/anime`
+    );
+    const dataJson = await response.json();
+    // dataJson.data.map((entry) => {
+    //   entry.map((anime) => console.log(anime));
+    // });
   }
 
   return (
