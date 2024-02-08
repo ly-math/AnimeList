@@ -73,3 +73,26 @@
     }
   }
 }
+
+@media (min-width: 600px) {
+  .recommendation-wrap {
+    .recommendation {
+      width: 85vw;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .recommendation-wrap {
+    .recommendation {
+      width: 65vw;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .recommendation-wrap {
+    .recommendation {
+      width: 60rem;
+    }
+  }
+}
