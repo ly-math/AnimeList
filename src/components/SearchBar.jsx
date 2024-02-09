@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../SCSS/search-bar.scss";
-import LoadingLayout from "../components/loadingLayout";
+import LoadingLayout from "../components/LoadingLayout";
 
 function SearchBar({ setOnSubmitSearch, setSearch, search, setH2Search }) {
   const [loadingPage, setLoadingPage] = useState(false);
