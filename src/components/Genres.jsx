@@ -9,7 +9,7 @@ function Genres() {
   useEffect(() => {
     setTimeout(() => {
       fetchGenresData();
-    }, 7000);
+    }, 6000);
   }, []);
 
   async function fetchGenresData() {

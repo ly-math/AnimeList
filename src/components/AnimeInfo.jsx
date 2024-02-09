@@ -1,5 +1,6 @@
 import React from "react";
 import "../SCSS/anime-info.scss";
+import Recommendation from "./Recommendation";
 
 function AnimeInfo({ clickData, setIsClicked }) {
   return (
@@ -49,6 +50,9 @@ function AnimeInfo({ clickData, setIsClicked }) {
               src={`https://www.youtube.com/embed/${clickData.trailer.youtube_id}`}
               allowFullScreen
             ></iframe>
+          </div>
+          <div className="recommendation-wrap">
+            <Recommendation />
           </div>
         </div>
       </div>

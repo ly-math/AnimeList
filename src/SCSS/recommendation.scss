@@ -8,6 +8,15 @@
     width: 3rem;
     z-index: 100;
   }
+  &::after {
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0)
+    );
+  }
   &::before {
     right: 0;
     bottom: 0;
@@ -17,22 +26,12 @@
       rgba(0, 0, 0, 0)
     );
   }
-  &::after {
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0)
-    );
-  }
-
   .recommendation {
     width: 90vw;
     height: 17rem;
     background-color: black;
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     overflow-x: auto;
     // border: 1px solid red;\
 
@@ -92,7 +91,7 @@
 @media (min-width: 1280px) {
   .recommendation-wrap {
     .recommendation {
-      width: 60rem;
+      width: 70rem;
     }
   }
 }

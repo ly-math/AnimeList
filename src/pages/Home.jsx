@@ -7,6 +7,7 @@ import SidePage from "../components/SidePage";
 import CurrentSeason from "../components/CurrentSeason";
 import Recommendation from "../components/Recommendation";
 import Genres from "../components/Genres";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -58,6 +59,10 @@ const Home = () => {
       </div>
       <div className="genres-wrap">
         <Genres />
+      </div>
+
+      <div className="footer-wrap">
+        <Footer />
       </div>
     </>
   );

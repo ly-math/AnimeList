@@ -93,6 +93,24 @@ input {
   align-items: center;
 }
 
+// footer
+.footer-wrap {
+  width: 100vw;
+  background-color: rgb(59, 22, 93);
+  position: absolute;
+  padding: 2rem;
+  left: 0;
+  right: 0;
+  .footer {
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+    a {
+      color: cyan;
+    }
+  }
+}
+
 @media (min-width: 600px) {
   .anime-list-wrap {
     position: relative;

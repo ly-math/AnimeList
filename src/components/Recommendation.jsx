@@ -2,22 +2,22 @@ import React, { useState, useEffect } from "react";
 import "../SCSS/recommendation.scss";
 
 function Recommendation() {
-  const [recommData, setRecommData] = useState([]);
   const [sliceRecommData, setSliceRecommData] = useState([]);
+
+  const randomPage = Math.floor(Math.random() * 5) + 1;
 
   useEffect(() => {
     setTimeout(() => {
       fetchRecommData();
-    }, 6000);
+    }, 5000);
   }, []);
 
   async function fetchRecommData() {
     const response = await fetch(
-      `https://api.jikan.moe/v4/recommendations/anime`
+      `https://api.jikan.moe/v4/recommendations/anime?page=${randomPage}`
     );
     const dataJson = await response.json();
-    const sliceData = await dataJson.data.slice(0, 12);
-    setRecommData(dataJson.data.entry);
+    const sliceData = await dataJson.data.slice(0, 30);
     setSliceRecommData(sliceData);
   }
   // console.log(sliceRecommData);

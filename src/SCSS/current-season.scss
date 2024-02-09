@@ -33,7 +33,7 @@
     height: 15rem;
     background-color: black;
     display: flex;
-    gap: 1rem;
+    gap: 0.8rem;
     overflow-x: auto;
     // border: 1px solid red;\
 
@@ -83,7 +83,7 @@
 @media (min-width: 1280px) {
   .current-season-wrap {
     .current-season {
-      width: 60rem;
+      width: 70rem;
     }
   }
 }

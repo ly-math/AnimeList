@@ -16,5 +16,13 @@ $blue: blueviolet;
     cursor: pointer;
     text-decoration: none;
     color: white;
+    position: relative;
+
+    &::after {
+      content: "69";
+      top: 0;
+      position: absolute;
+      font-size: 1rem;
+    }
   }
 }

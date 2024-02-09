@@ -5,39 +5,36 @@ function GenrePage() {
   const [allGenreData, setAllGenreData] = useState([]);
   const [selectedGenre, setSelectedGenre] = useState("");
 
-  const { mal_id } = useParams();
+  const { ID } = useParams();
 
   useEffect(() => {
-    setSelectedGenre(mal_id);
-    // fetchDataTest();
-    fetchDataTest2();
+    // setSelectedGenre(ID);
+    // fetchGenreData();
+    // fetchDataTest2();
   }, []);
 
-  async function fetchDataTest() {
-    const response = await fetch(
-      `https://api.jikan.moe/v4/top/anime?q=&limit=25`
-    );
-    const dataJson = await response.json();
-    setAllGenreData(dataJson.data);
-
-    const filterGenreAnime = dataJson.data.filter((anime) =>
-      anime.genres.some((item) => item.name === selectedGenre)
-    );
+  async function fetchGenreData() {
+    // const response = await fetch(
+    //   `https://api.jikan.moe/v4/recommendations/anime`
+    // );
+    // const dataJson = await response.json();
+    // setAllGenreData(dataJson);
+    // console.log(dataJson);
+    // const filterGenreAnime = allGenreData.filter((anime) =>
+    //   anime.genres.some((item) => item.mal_id == selectedGenre)
+    // );
     // console.log(filterGenreAnime);
   }
 
-  async function fetchDataTest2(page = 1) {
-    const response = await fetch(
-      `https://api.jikan.moe/v4/anime?genre=30&page=${page}`
-    );
-    const dataJson = await response.json();
-    if (dataJson.data.length > 0) {
-      fetchDataTest(page + 1);
-    }
-    console.log(dataJson);
-  }
+  // async function fetchDataTest2() {
+  //   const response = await fetch(
+  //     `https://api.jikan.moe/v4/anime?genre?id=10&name=Fantasy&page=10`
+  //   );
+  //   const dataJson = await response.json();
+  //   console.log(dataJson);
+  // }
 
-  return <div style={{ color: "white" }}>hello {mal_id}</div>;
+  return <div style={{ color: "white" }}>This page is on working.</div>;
 }
 
 export default GenrePage;
