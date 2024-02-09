@@ -4,8 +4,6 @@ import "../SCSS/recommendation.scss";
 function Recommendation() {
   const [sliceRecommData, setSliceRecommData] = useState([]);
 
-  const randomPage = Math.floor(Math.random() * 5) + 1;
-
   useEffect(() => {
     setTimeout(() => {
       fetchRecommData();
@@ -14,7 +12,7 @@ function Recommendation() {
 
   async function fetchRecommData() {
     const response = await fetch(
-      `https://api.jikan.moe/v4/recommendations/anime?page=${randomPage}`
+      `https://api.jikan.moe/v4/recommendations/anime`
     );
     const dataJson = await response.json();
     const sliceData = await dataJson.data.slice(0, 30);
