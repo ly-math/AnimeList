@@ -25,7 +25,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/AnimeList/" element={<Home />} />
-          <Route path="/genre/:genre" element={<GenrePage />} />
+          <Route path="/genre/:mal_id" element={<GenrePage />} />
         </Routes>
       </Router>
     </>

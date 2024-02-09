@@ -25,7 +25,7 @@ function Genres() {
       <div className={isClicked ? "genres expand" : "genres"}>
         {genresData
           ? genresData.map((item, i) => (
-              <Link key={i} to={`/genre/${item.name}`} className="Link">
+              <Link key={i} to={`/genre/${item.mal_id}`} className="Link">
                 <div className="genre-list">
                   <p>{item.name}</p>
                 </div>
