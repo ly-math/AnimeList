@@ -67,8 +67,13 @@
   }
 }
 
-.side-page.full-width {
+.side-page.full-width-2 {
   height: 100%;
+  .anime-list-main-2 {
+    &::after {
+      display: none;
+    }
+  }
 }
 
 @media (min-width: 600px) {
@@ -89,17 +94,17 @@
   }
 }
 @media (min-width: 1024px) {
-  // .side-page {
-  //   .anime-list-main-2 {
-  //     grid-template-columns: repeat(2, auto);
-  //     max-width: 400px;
-  //   }
-  // }
+  .side-page {
+    .anime-list-main-2 {
+      grid-template-columns: repeat(5, auto);
+      max-width: 1024px;
+    }
+  }
 }
 @media (min-width: 1280px) {
   .side-page {
     .anime-list-main-2 {
-      grid-template-columns: repeat(6, auto);
+      grid-template-columns: repeat(3, auto);
       max-width: 1280px;
     }
   }

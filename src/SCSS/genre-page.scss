@@ -1,0 +1,40 @@
+.side-page.for-genre {
+  height: 100%;
+
+  .anime-list-main-2.for-genre {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.btn-wrap {
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  .next-btn,
+  .prev-btn {
+    width: 7rem;
+    height: 2rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+    background-color: blueviolet;
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+.loading-animation {
+  height: 100%;
+}
+
+@media (min-width: 1280px) {
+  .side-page.for-genre {
+    .anime-list-main-2.for-genre {
+      grid-template-columns: repeat(6, auto);
+      max-width: 1280px;
+    }
+  }
+}

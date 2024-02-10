@@ -48,13 +48,15 @@ input {
   .view-more-btn {
     background-color: blueviolet;
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
     left: 30%;
     width: 7rem;
     height: 2rem;
     border-radius: 0.5rem;
     font-size: 1rem;
     box-shadow: 0 0 10px blueviolet;
+
+    z-index: 99;
 
     cursor: pointer;
     a {
@@ -71,7 +73,7 @@ input {
     background-color: blueviolet;
     font-weight: 600;
     position: absolute;
-    bottom: 2rem;
+    bottom: 4rem;
     left: 30%;
     width: 7rem;
     height: 2rem;
@@ -98,7 +100,7 @@ input {
   width: 100vw;
   background-color: rgb(59, 22, 93);
   position: absolute;
-  padding: 2rem;
+  padding: 1rem;
   left: 0;
   right: 0;
   .footer {
@@ -118,7 +120,6 @@ input {
     .view-more-btn {
       background-color: blueviolet;
       position: absolute;
-      bottom: 0;
       left: 40%;
       width: 8rem;
       height: 2rem;
@@ -141,7 +142,6 @@ input {
       background-color: blueviolet;
       font-weight: 600;
       position: absolute;
-      bottom: 0;
       left: 40%;
       width: 8rem;
       height: 2rem;
@@ -165,5 +165,12 @@ input {
   .homepage-container {
     display: flex;
     gap: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .homepage-container {
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
   }
 }

@@ -28,7 +28,7 @@ function SidePage() {
   }
 
   return (
-    <div className={viewMoreBtn ? "side-page full-width" : "side-page"}>
+    <div className={viewMoreBtn ? "side-page full-width-2" : "side-page"}>
       <h2 className="h2">Top Upcoming</h2>
       <div className="anime-list-main-2">
         {upComingAnime
@@ -68,7 +68,7 @@ function SidePage() {
         )}
       </div>
       <button className="view-more-btn" onClick={handleViewMoreBtn}>
-        <a href="#to-top-2">{viewMoreBtn ? "Show less 🠩" : "Show more ⬇"}</a>
+        <a href="#to-top-2">{viewMoreBtn ? "Show less" : "Show more"}</a>
       </button>
     </div>
   );

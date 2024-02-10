@@ -1,8 +1,5 @@
-.anime-list-main {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 1rem;
-  width: 100%;
+.anime-list-wrap {
+  // border: 1px solid blue;
   height: 45rem;
   overflow: hidden;
 
@@ -20,6 +17,13 @@
       rgba(0, 0, 0, 0.1)
     );
   }
+}
+
+.anime-list-main {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 1rem;
+  width: 100%;
 
   .card {
     transition: scale 0.2s ease-in-out;
@@ -62,29 +66,17 @@
   }
 }
 
-.anime-list-main.full-width {
+.anime-list-wrap.full-width {
   height: 100%;
 
   &::after {
-    content: "";
-    position: absolute;
-    height: 5rem;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    // background-color: red;
-    background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0)
-    );
+    display: none;
   }
 }
 
 @media (min-width: 475px) {
   .anime-list-main {
     max-width: 475px;
-    overflow-x: hidden;
   }
 }
 
@@ -102,14 +94,14 @@
   }
 }
 @media (min-width: 1024px) {
-  // .anime-list-main {
-  //   max-width: 1024px;
-  //   grid-template-columns: repeat(2, auto);
-  // }
+  .anime-list-main {
+    grid-template-columns: repeat(5, auto);
+    max-width: 1024px;
+  }
 }
 @media (min-width: 1280px) {
   .anime-list-main {
     max-width: 1280px;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(3, auto);
   }
 }

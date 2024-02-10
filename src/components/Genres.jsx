@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../SCSS/genres.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Genres() {
   const [genresData, SetGenresData] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setTimeout(() => {
@@ -25,11 +27,17 @@ function Genres() {
       <div className={isClicked ? "genres expand" : "genres"}>
         {genresData
           ? genresData.map((item, i) => (
-              <Link key={i} to={`/genre/${item.mal_id}`} className="Link">
-                <div className="genre-list">
-                  <p>{item.name}</p>
-                </div>
-              </Link>
+              <div
+                className="genre-list"
+                key={i}
+                onClick={() => {
+                  navigate(`/genre/${item.mal_id}`, {
+                    state: { genreName: item.name },
+                  });
+                }}
+              >
+                <p>{item.name}</p>
+              </div>
             ))
           : ""}
         <button onClick={() => setIsClicked(!isClicked)}>

@@ -44,11 +44,9 @@ const Home = () => {
         <CurrentSeason />
       </div>
       <div className="homepage-container">
-        <main>
-          <div className="anime-list-wrap" id="to-top">
-            <AnimeList animeData={animeData} h2Search={h2Search} />
-          </div>
-        </main>
+        <div id="to-top">
+          <AnimeList animeData={animeData} h2Search={h2Search} />
+        </div>
 
         <div className="side-page-wrap" id="to-top-2">
           <SidePage />
