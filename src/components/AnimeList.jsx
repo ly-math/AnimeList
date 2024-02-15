@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../SCSS/anime-list.scss";
 import AnimeInfo from "./AnimeInfo";
 
-function AnimeList({ animeData, h2Search }) {
+function AnimeList({ animeData }) {
   const [isClicked, setIsClicked] = useState(false);
   const [clickData, setClickData] = useState();
   const [viewMoreBtn, setViewMoreBtn] = useState(false);
@@ -13,7 +13,7 @@ function AnimeList({ animeData, h2Search }) {
 
   return (
     <>
-      <h2 className="h2 most-popular">{h2Search}</h2>
+      <h2 className="h2 most-popular">Top Rating</h2>
       <div
         className={
           viewMoreBtn ? "anime-list-wrap full-width" : "anime-list-wrap"

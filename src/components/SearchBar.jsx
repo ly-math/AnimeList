@@ -1,28 +1,18 @@
 import React, { useState } from "react";
 import "../SCSS/search-bar.scss";
-import LoadingLayout from "../components/LoadingLayout";
+import { useNavigate } from "react-router-dom";
 
-function SearchBar({ setOnSubmitSearch, setSearch, search, setH2Search }) {
-  const [loadingPage, setLoadingPage] = useState(false);
+function SearchBar() {
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   function handleSearchSubmit(e) {
     e.preventDefault();
-    setLoadingPage(true);
-    setOnSubmitSearch(search);
-    setH2Search(search ? search : "Popular Anime");
-  }
-
-  if (loadingPage) {
-    setTimeout(() => {
-      setLoadingPage(false);
-    }, 2000);
+    navigate(`/AnimeList/search/${search}`);
   }
 
   return (
     <>
-      <div className="loading-screen">
-        {loadingPage ? <LoadingLayout loadingPage={loadingPage} /> : ""}
-      </div>
       <div className="search-section">
         <form onSubmit={handleSearchSubmit}>
           <input

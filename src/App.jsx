@@ -6,7 +6,7 @@ import GenrePage from "./pages/GenrePage";
 import TopSeasonal from "./pages/TopSeasonal";
 import TopRating from "./pages/TopRating";
 import TopUpcoming from "./pages/TopUpcoming";
-import TopRecommend from "./pages/TopRecommend";
+import SearchPage from "./pages/SearchPage";
 
 function App() {
   const [loadingPage, setLoadingPage] = useState(false);
@@ -29,11 +29,11 @@ function App() {
       <Router>
         <Routes>
           <Route path="/AnimeList" element={<Home />} />
-          <Route path="/genre/:ID" element={<GenrePage />} />
-          <Route path="/top-seasonal/" element={<TopSeasonal />} />
-          <Route path="/top-rating/" element={<TopRating />} />
-          <Route path="/top-upcoming/" element={<TopUpcoming />} />
-          <Route path="/top-recommend/" element={<TopRecommend />} />
+          <Route path="/AnimeList/genre/:ID" element={<GenrePage />} />
+          <Route path="/AnimeList/top-seasonal/" element={<TopSeasonal />} />
+          <Route path="/AnimeList/top-rating/" element={<TopRating />} />
+          <Route path="/AnimeList/top-upcoming/" element={<TopUpcoming />} />
+          <Route path="/AnimeList/search/:animeName" element={<SearchPage />} />
         </Routes>
       </Router>
     </>

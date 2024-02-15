@@ -19,13 +19,13 @@ function NavBar({ isOpen, setIsOpen }) {
           <h4>
             <a href="/">Home</a>
           </h4>
-          <Link to="/top-seasonal/">
+          <Link to="/AnimeList/top-seasonal/">
             <h4>Top Seasonal</h4>
           </Link>
-          <Link to="/top-rating/">
+          <Link to="/AnimeList/top-rating/">
             <h4>Top Rating</h4>
           </Link>
-          <Link to="/top-upcoming/">
+          <Link to="/AnimeList/top-upcoming/">
             <h4>Top Upcoming</h4>
           </Link>
           <h4>
