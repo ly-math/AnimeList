@@ -34,7 +34,7 @@ function Genres() {
                 className="genre-list"
                 key={i}
                 onClick={() => {
-                  navigate(`/genre/${item.mal_id}`, {
+                  navigate(`/AnimeList/genre/${item.mal_id}`, {
                     state: { genreName: item.name },
                   });
                 }}
