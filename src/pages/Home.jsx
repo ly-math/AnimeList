@@ -8,6 +8,7 @@ import CurrentSeason from "../components/CurrentSeason";
 import Recommendation from "../components/Recommendation";
 import Genres from "../components/Genres";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -52,7 +53,7 @@ const Home = () => {
           <SidePage />
         </div>
       </div>
-      <div className="recommendation-wrap">
+      <div className="recommendation-wrap" id="recommend">
         <Recommendation />
       </div>
       <div className="genres-wrap">

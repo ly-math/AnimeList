@@ -45,3 +45,13 @@
     }
   }
 }
+@media (min-width: 1024px) {
+  .search-section {
+    // max-width: 600px;
+
+    input {
+      width: 40rem;
+      padding-block: 1rem;
+    }
+  }
+}

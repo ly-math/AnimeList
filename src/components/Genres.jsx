@@ -24,7 +24,10 @@ function Genres() {
   return (
     <>
       <h2 className="h2">Genres</h2>
-      <div className={isClicked ? "genres expand" : "genres"}>
+      <div
+        className={isClicked ? "genres expand" : "genres"}
+        id="genre-section"
+      >
         {genresData
           ? genresData.map((item, i) => (
               <div

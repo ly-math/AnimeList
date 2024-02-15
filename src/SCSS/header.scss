@@ -4,13 +4,20 @@ $blue: blueviolet;
   position: fixed;
   background-color: $blue;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 3rem;
   width: 100vw;
+  padding-inline: 1rem;
   top: 0;
   left: 0;
   z-index: 99999;
+
+  .icon {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
 
   a {
     cursor: pointer;
@@ -24,5 +31,11 @@ $blue: blueviolet;
       position: absolute;
       font-size: 1rem;
     }
+  }
+}
+
+@media (min-width: 1028px) {
+  .header {
+    justify-content: space-evenly;
   }
 }

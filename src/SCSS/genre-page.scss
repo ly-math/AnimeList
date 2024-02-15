@@ -1,3 +1,8 @@
+.h2.for-genre {
+  margin-top: 3rem;
+  padding-bottom: 0;
+}
+
 .side-page.for-genre {
   height: 100%;
 
@@ -23,6 +28,16 @@
     background-color: blueviolet;
     text-align: center;
     cursor: pointer;
+
+    &:hover,
+    :focus {
+      box-shadow: 0 0 10px blueviolet;
+      background-color: rgb(153, 72, 229);
+    }
+    &:active {
+      box-shadow: 0 0 15px rgb(255, 255, 255);
+      background-color: rgb(171, 114, 225);
+    }
   }
 }
 

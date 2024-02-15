@@ -12,7 +12,7 @@ function SidePage() {
   useEffect(() => {
     setTimeout(() => {
       fetchUpComing();
-    }, 4000);
+    }, 3100);
   }, []);
 
   async function fetchUpComing() {

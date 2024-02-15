@@ -1,39 +1,40 @@
 import React, { useEffect, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
-import "../SCSS/genre-page.scss";
-import LoadingLayout from "../components/LoadingLayout";
 import PrevNextButtons from "../components/PrevNextButtons";
+import LoadingLayout from "../components/LoadingLayout";
 import Header from "../components/Header";
+import AnimeInfo from "../components/AnimeInfo";
+import Footer from "../components/Footer";
 
-function GenrePage() {
-  const [allGenreData, setAllGenreData] = useState([]);
+function TopSeasonal() {
+  const [seasonalData, setSeasonalData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(1);
 
   const [loadingPage, setLoadingPage] = useState(false);
-
-  const location = useLocation();
-  const genreName = location.state.genreName;
-  const { ID } = useParams();
+  const [clickData, setClickData] = useState();
+  const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
-    fetchGenreData();
+    fetchAnimeSeason();
     setLoadingPage(true);
     document.body.style.overflow = "hidden";
   }, [currentPage]);
 
-  async function fetchGenreData() {
-    const response = await fetch(
-      `https://api.jikan.moe/v4/anime?genres=${ID}&page=${currentPage}`
-    );
-    const dataJson = await response.json();
-    setAllGenreData(dataJson.data);
-    setTotalPage(Math.round(dataJson.pagination.items.total / 25));
+  async function fetchAnimeSeason() {
+    try {
+      const response = await fetch(
+        `https://api.jikan.moe/v4/seasons/now?&page=${currentPage}`
+      );
+      const dataJson = await response.json();
+      setSeasonalData(dataJson.data);
+      setTotalPage(Math.round(dataJson.pagination.items.total / 25));
+      setLoadingPage(false);
+      document.body.style.overflow = "visible";
 
-    setLoadingPage(false);
-    document.body.style.overflow = "visible";
-    // console.log(dataJson);
-    // console.log(totalPage);
+      // console.log(dataJson);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   function handlePrev() {
@@ -53,7 +54,7 @@ function GenrePage() {
         {loadingPage ? <LoadingLayout loadingPage={loadingPage} /> : ""}
       </div>
 
-      <h2 className="h2 for-genre">Genre : {genreName}</h2>
+      <h2 className="h2 for-genre">TopSeasonal</h2>
 
       <div className="side-page for-genre">
         <PrevNextButtons
@@ -64,9 +65,16 @@ function GenrePage() {
         />
 
         <div className="anime-list-main-2 for-genre">
-          {allGenreData.map((item, i) => {
+          {seasonalData.map((item, i) => {
             return (
-              <div key={i} className="card">
+              <div
+                key={i}
+                className="card"
+                onClick={() => {
+                  setClickData(item);
+                  setIsClicked(true);
+                }}
+              >
                 <div className="image">
                   <img src={item.images.jpg.large_image_url} alt="image" />
                   <span>Ep : {item.episodes}</span>
@@ -91,11 +99,19 @@ function GenrePage() {
         />
       </div>
 
-      <div className="loading-screen for-genre">
-        {loadingPage ? <LoadingLayout loadingPage={loadingPage} /> : ""}
+      <div className="footer-wrap">
+        <Footer />
       </div>
+
+      {isClicked ? (
+        <div>
+          <AnimeInfo clickData={clickData} setIsClicked={setIsClicked} />
+        </div>
+      ) : (
+        ""
+      )}
     </>
   );
 }
 
-export default GenrePage;
+export default TopSeasonal;
