@@ -9,22 +9,22 @@ import TopUpcoming from "./pages/TopUpcoming";
 import SearchPage from "./pages/SearchPage";
 
 function App() {
-  const [loadingPage, setLoadingPage] = useState(false);
+  // const [loadingPage, setLoadingPage] = useState(false);
 
-  useEffect(() => {
-    setLoadingPage(true);
-    document.body.style.overflow = "hidden";
-    setTimeout(() => {
-      setLoadingPage(false);
-      document.body.style.overflow = "visible";
-    }, 2500);
-  }, []);
+  // useEffect(() => {
+  //   setLoadingPage(true);
+  //   document.body.style.overflow = "hidden";
+  //   setTimeout(() => {
+  //     setLoadingPage(false);
+  //     document.body.style.overflow = "visible";
+  //   }, 1000);
+  // }, []);
 
   return (
     <>
-      <div className="loading-screen">
+      {/* <div className="loading-screen">
         {loadingPage ? <LoadingLayout loadingPage={loadingPage} /> : ""}
-      </div>
+      </div> */}
 
       <Router>
         <Routes>
