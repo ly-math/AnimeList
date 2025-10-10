@@ -23,7 +23,7 @@ function Genres() {
 
   return (
     <>
-      <h2 className="h2">Genres</h2>
+      <h2 className="h2 genre-section">Genres</h2>
       <div
         className={isClicked ? "genres expand" : "genres"}
         id="genre-section"

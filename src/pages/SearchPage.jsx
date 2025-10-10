@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Header from "../components/Header";
 
 function SearchPage() {
   const [searchData, setSearchData] = useState([]);
@@ -21,6 +22,7 @@ function SearchPage() {
 
   return (
     <>
+    <Header />
       <h2 className="h2">Search Result</h2>
       <div className="side-page for-genre">
         <div className="anime-list-main-2 for-genre">

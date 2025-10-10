@@ -23,7 +23,7 @@
 
     img {
       width: 10rem;
-      // height: 15rem;
+      height: 15rem;
     }
 
     .top {
@@ -163,6 +163,7 @@
       .top {
         iframe {
           display: block;
+          width: 30rem;
           aspect-ratio: 16/9;
         }
       }
