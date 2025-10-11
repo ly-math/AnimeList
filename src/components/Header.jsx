@@ -18,7 +18,7 @@ const Header = () => {
       <header className="header">
         <div className="spacer"></div>
         <h1>
-          <a href="/AnimeList/">AnimeList</a>
+          <a href="/AnimeList">AnimeList</a>
         </h1>
         <div className="icon" onClick={handleClick}>
           <FontAwesomeIcon icon={faBars} />
