@@ -17,7 +17,7 @@ function NavBar({ isOpen, setIsOpen }) {
         </div>
         <div className="link">
           <h4>
-            <a href="/AnimeList/">Home</a>
+            <a href="/">Home</a>
           </h4>
           <Link to="/AnimeList/top-seasonal/">
             <h4>Top Seasonal</h4>
