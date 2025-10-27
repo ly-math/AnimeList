@@ -25,7 +25,7 @@ The project focuses on **UI simplicity** and **API**
 This app was developed using:
 
 - **React.js (Vite)** – Frontend framework for fast rendering  
-- **AniList GraphQL API** – For fetching anime data  
+- **AniList API** – For fetching anime data  
 - **CSS / SCSS** – Custom styling and layout   
 - **GitHub Pages** – For hosting and deployment  
 
