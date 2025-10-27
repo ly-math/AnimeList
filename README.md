@@ -16,7 +16,7 @@ It allows users to browse anime details such as:
 - ⭐ Average ratings and popularity  
 - 🖼️ Cover images  
 
-The project focuses on **UI simplicity** and **fast performance**, giving users a pleasant browsing experience.
+The project focuses on **UI simplicity** and **API**
 
 ---
 
